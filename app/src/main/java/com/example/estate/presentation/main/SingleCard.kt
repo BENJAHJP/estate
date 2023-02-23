@@ -1,5 +1,6 @@
 package com.example.estate.presentation.main
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -66,8 +67,7 @@ fun SingleCard(
                 verticalArrangement = Arrangement.Bottom,
                 horizontalAlignment = Alignment.End
             ) {
-                Icon(
-                    tint = Color.White,
+                Image(
                     modifier = Modifier.size(100.dp),
                     painter = icon,
                     contentDescription = title
