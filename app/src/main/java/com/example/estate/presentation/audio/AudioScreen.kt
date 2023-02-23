@@ -43,7 +43,7 @@ fun AudioScreen() {
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier.fillMaxSize()
-                .background(color = BlackSurface)
+                .background(color = Color.White)
         ) {
             ElevatedCard(
                 colors = CardDefaults.elevatedCardColors(
