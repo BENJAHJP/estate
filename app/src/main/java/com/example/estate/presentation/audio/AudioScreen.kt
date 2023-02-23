@@ -2,6 +2,7 @@ package com.example.estate.presentation.audio
 
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -66,8 +67,7 @@ fun AudioScreen() {
                     verticalArrangement = Arrangement.SpaceAround,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Icon(
-                        tint = Color.White,
+                    Image(
                         modifier = Modifier.size(200.dp),
                         painter = painterResource(id = R.drawable.music),
                         contentDescription = "music"

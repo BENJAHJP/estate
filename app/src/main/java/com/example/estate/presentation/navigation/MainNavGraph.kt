@@ -27,7 +27,7 @@ fun MainNavGraph(
             enterTransition = {
                 when (initialState.destination.route) {
                     Screens.MainScreen.route ->
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(500))
+                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(300))
                     else -> null
                 }
             },
@@ -51,7 +51,7 @@ fun MainNavGraph(
             enterTransition = {
                 when (initialState.destination.route) {
                     Screens.MainScreen.route ->
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(500))
+                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(300))
                     else -> null
                 }
             },
@@ -70,7 +70,7 @@ fun MainNavGraph(
             enterTransition = {
                 when (initialState.destination.route) {
                     Screens.MainScreen.route ->
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(500))
+                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left, animationSpec = tween(300))
                     else -> null
                 }
             },
