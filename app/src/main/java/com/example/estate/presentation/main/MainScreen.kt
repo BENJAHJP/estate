@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import com.example.estate.R
@@ -38,7 +39,7 @@ fun MainScreen(
         )
     )
     Scaffold(
-        containerColor = BlackSurface
+        containerColor = Color.White
     ) {
         LazyColumn(){
             items(items){ item ->
