@@ -3,6 +3,8 @@ package com.example.estate.presentation.main
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -23,7 +25,6 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.estate.R
-import com.example.estate.ui.theme.BlackSurface
 import com.example.estate.ui.theme.Blue
 import com.example.estate.ui.theme.Purple
 import com.example.estate.ui.theme.Red
@@ -42,7 +43,7 @@ fun MainScreen(
     LaunchedEffect(key1 = true){
         scope.launch {
             isLoading = true
-            delay(3000L)
+            delay(2500L)
             isLoading = false
         }
     }
@@ -66,7 +67,11 @@ fun MainScreen(
     Scaffold(
         containerColor = Color.White
     ) {
-        Box(modifier = Modifier.fillMaxSize()){
+        Box(
+            modifier = Modifier.fillMaxSize()
+                .statusBarsPadding()
+                .navigationBarsPadding()
+        ){
             if (isLoading){
                 val lottieCompositionSpec by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(
                     R.raw.loading))

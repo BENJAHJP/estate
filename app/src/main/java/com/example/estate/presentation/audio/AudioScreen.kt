@@ -28,21 +28,24 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.estate.R
 import com.example.estate.ui.theme.BlackSurface
 import com.example.estate.ui.theme.Blue
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun AudioScreen() {
+fun AudioScreen(
+    viewModel: AudioViewModel = hiltViewModel()
+) {
     var start by remember { mutableStateOf(false) }
     val context = LocalContext.current
-    val mediaPlayer: MediaPlayer = MediaPlayer.create(context, R.raw.animation)
 
     Scaffold() {
         Box(
             contentAlignment = Alignment.Center,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
                 .background(color = Color.White)
         ) {
             ElevatedCard(
@@ -75,7 +78,7 @@ fun AudioScreen() {
                     if (!start){
                         IconButton(
                             onClick = {
-                                mediaPlayer.start()
+                                viewModel.start()
                                 start = !start
                             }
                         ) {
@@ -86,7 +89,7 @@ fun AudioScreen() {
                                 contentDescription = "start") }
                     } else {
                         IconButton(onClick = {
-                            mediaPlayer.pause()
+                            viewModel.pause()
                             start = !start
                         }) {
                             Icon(
