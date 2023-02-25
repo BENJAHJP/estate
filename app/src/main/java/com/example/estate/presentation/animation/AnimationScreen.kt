@@ -27,7 +27,7 @@ import com.example.estate.ui.theme.BlackSurface
 @Composable
 fun AnimationScreen() {
     val context = LocalContext.current
-    val uri: Uri = RawResourceDataSource.buildRawResourceUri(R.raw.video)
+    val uri: Uri = RawResourceDataSource.buildRawResourceUri(R.raw.animation)
     val player: Player = ExoPlayer.Builder(context).build()
     player.setMediaItem(MediaItem.fromUri(uri))
     player.prepare()

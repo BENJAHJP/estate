@@ -37,7 +37,7 @@ import com.example.estate.ui.theme.Blue
 fun AudioScreen() {
     var start by remember { mutableStateOf(false) }
     val context = LocalContext.current
-    val mediaPlayer: MediaPlayer = MediaPlayer.create(context, R.raw.song)
+    val mediaPlayer: MediaPlayer = MediaPlayer.create(context, R.raw.animation)
 
     Scaffold() {
         Box(
