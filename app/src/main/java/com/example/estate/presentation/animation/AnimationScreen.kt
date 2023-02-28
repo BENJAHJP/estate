@@ -31,8 +31,7 @@ fun AnimationScreen(
         ) {
             AndroidView(
                 modifier = Modifier.fillMaxWidth()
-                    .aspectRatio(16 / 9f)
-                ,
+                    .aspectRatio(16 / 9f),
                 factory = { context ->
                     PlayerView(context).also {
                         it.player = viewModel.player

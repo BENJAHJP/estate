@@ -25,6 +25,6 @@ object AppModule {
     @Provides
     @ViewModelScoped
     fun provideMediaPlayer(app: Application): MediaPlayer{
-        return MediaPlayer.create(app, R.raw.animation)
+        return MediaPlayer.create(app, R.raw.audio)
     }
 }
